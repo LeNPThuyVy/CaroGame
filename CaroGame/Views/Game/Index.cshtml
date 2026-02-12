@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewBag.Title = "Game caro";
+}
+@model CaroGame.Models.GameState
+<style>
+    .W2Play_btn {
+        background-color: #dfedff;
+        font-weight: bolder;
+    }
+
+        .W2Play_btn:hover {
+            background-color: lightgrey;
+            color: black;
+            border: 1px solid black;
+            font-weight: bolder;
+        }
+
+    .WAI_btn {
+        background-color: #f5ebfe;
+        font-weight: bolder;
+    }
+
+        .WAI_btn:hover {
+            background-color: lightgrey;
+            color: black;
+            border: 1px solid black;
+            font-weight: bolder;
+        }
+</style>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <!--Cột hiển thị chế dộ và bàn cờ-->
+        <div class="col-7">
+            <!-- Nút cho phép người chơi chọn chế độ chơi 2 người hoặc chơi với máy-->
+            <div class="row" style="margin-top:30px;margin-bottom:30px">
+                @if (Model.IsAIMode)
+                {
+                    <div class="col-6">
+                        <a href="@Url.Action("SelectMode", "Game", new {isAI=true})" class="btn W2Play_btn btn-lg" style="width:60%">THÔNG THƯỜNG</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="@Url.Action("SelectMode", "Game", new {isAI=true,isNormal=false})" class="btn WAI_btn btn-lg" style="width:60%">CẢI TIẾN</a>
+                    </div>
+                }
+
+            </div>
+
+            <!--Bàn cờ-->
+            <div>
+                <table id="board">
+                    @for (int i = 0; i < Model.board.size; i++)
+                    {
+                        <tr>
+                            @for (int j = 0; j < Model.board.size; j++)
+                            {
+                                <td style="width:40px;height:40px;border:1px solid black;text-align:center;font-size:18px;">
+                                    @if (Model.board.cells[i, j] == 0 && !Model.IsOver)
+                                    {
+                                        if (Model.IsAIMode && !Model.IsNormal)
+                                        {
+                                            <a href="@Url.Action("AfterClick_AI_Mode", "Game", new {r=i,c=j})" style="display:block;width:100%;height:100%;"></a>
+                                        }
+                                        else if (Model.IsAIMode && Model.IsNormal)
+                                        {
+                                            <a href="@Url.Action("AfterClick_AI_Mode_Normal", "Game", new {r=i,c=j})" style="display:block;width:100%;height:100%;"></a>
+
+                                        }
+                                        else
+                                        {
+                                            <a href="@Url.Action("AfterClick", "Game", new {r=i,c=j})" style="display:block;width:100%;height:100%;"></a>
+                                        }
+
+                                    }
+                                    else if (Model.board.cells[i, j] == 1)
+                                    {
+                                        <span>X</span>
+                                    }
+                                    else if (Model.board.cells[i, j] == 2)
+                                    {
+                                        <span>O</span>
+                                    }
+                                </td>
+                            }
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+        <!--Cột hiển thị game control và thực hiện thống kê-->
+        <div class="col-4">
+            <!--Hiển thị game control-->
+            <div style="border: 1px solid #c2dcff;padding-bottom:20px">
+                <!--title-->
+                <h4 style="width: 100%; background-color: #c2dcff; text-align:center;line-height:50px">GAME CONTROL</h4>
+                <div style="margin-left:30px;padding-bottom:20px">
+                    <h5 style="margin-bottom:10px">Mode:
+                
+                    @if(!Model.IsAIMode)
+                    {
+                        <span style="font-weight:normal"> 2 Người chơi</span>
+                    }
+                    else if(Model.IsAIMode && Model.IsNormal)
+                    {
+                        <span style="font-weight:normal"> Đấu với máy - Thông thường</span>
+                    }
+                    else
+                    {
+                        <span style="font-weight:normal"> Đấu với máy - Nâng cao</span>
+                    }
+                    </h5>
+                  
+                </div>
+                <div class="d-flex justify-content-between px-4">
+                    <a class="btn btn-outline-primary btn-lg" href="@Url.Action("SelectMode","Game", new {isAI=false})" style="min-width:150px">2 NGƯỜI CHƠI</a>
+                    <a class="btn btn-outline-primary btn-lg" href="@Url.Action("SelectMode","Game", new {isAI=true})" style="min-width:150px">CHƠI VỚI AI</a>
+                </div>
+            </div>
+
+            <!--Hiển thị thống kê - Statistical win-->
+            @if (Model.IsAIMode)
+            {
+                <div style="border: 1px solid #e2cbf6; margin-top: 50px; min-height: 250px">
+                    <!--title-->
+                    <h4 style="width: 100%; background-color: #e2cbf6; text-align: center; line-height: 50px">THỐNG KÊ</h4>
+                    <div style="padding:10px;margin:20px">
+                        @if (Model.IsNormal)
+                        {
+                            <h5>
+                                Số lần thắng:
+                                <span style="font-weight:normal">@Model.StatsNormal.Win</span>
+                            </h5>
+                            <h5>
+                                Số lần thua:
+                                <span style="font-weight:normal">@Model.StatsNormal.Lose</span>
+                            </h5>
+                            <h5>
+                                Thời gian trung bình:
+                                <span style="font-weight:normal">@Model.StatsNormal.AvgTime.ToString("0.####")</span>
+                            </h5>
+                            <h5>
+                                Tổng số nước đã đi:
+                                <span style="font-weight:normal">@Model.StatsNormal.Moves</span>
+                            </h5>
+                        }
+                        else
+                        {
+                            <h5>
+                                Số lần thắng:
+                                <span style="font-weight:normal">@Model.StatsUpdate.Win</span>
+                            </h5>
+                            <h5>
+                                Số lần thua:
+                                <span style="font-weight:normal">@Model.StatsUpdate.Lose</span>
+                            </h5>
+                            <h5>
+                                Thời gian trung bình:
+                                <span style="font-weight:normal">@Model.StatsUpdate.AvgTime.ToString("0.####")</span>
+                            </h5>
+                            <h5>
+                                Tổng số nước đã đi:
+                                <span style="font-weight:normal">@Model.StatsUpdate.Moves</span>
+                            </h5>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!--Thông báo người chiến thắng-->
+    <div class="modal fade" id="winModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kết quả</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body fs-4">
+                    Người chiến thắng là:
+                    <strong id="winnerText"></strong>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--Hiển thị thông báo người chiến thắng-->
+@if (TempData["WINNER"] != null)
+{
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+         const winner = "@((int)TempData["WINNER"] == 1 ? "X" : "O")";
+         document.getElementById("winnerText").innerText = winner;
+
+         const modal = new bootstrap.Modal(document.getElementById("winModal"));
+         modal.show();
+     });
+    </script>
+}
+

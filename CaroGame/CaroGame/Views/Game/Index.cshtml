@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "Game caro";
+}
+@model CaroGame.Models.GameState
+<style>
+    .W2Play_btn {
+        background-color: #dfedff;
+        font-weight: bolder;
+    }
+
+        .W2Play_btn:hover {
+            background-color: lightgrey;
+            color: black;
+            border: 1px solid black;
+            font-weight: bolder;
+        }
+
+    .WAI_btn {
+        background-color: #f5ebfe;
+        font-weight: bolder;
+    }
+
+        .WAI_btn:hover {
+            background-color: lightgrey;
+            color: black;
+            border: 1px solid black;
+            font-weight: bolder;
+        }
+</style>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <!--Cột hiển thị chế dộ và bàn cờ-->
+        <div class="col-7">
+            <!-- Nút cho phép người chơi chọn chế độ chơi 2 người hoặc chơi với máy-->
+            <div class="row" style="margin-top:30px;margin-bottom:30px">
+                <div class="col-6">
+                    <a href="@Url.Action("SelectMode", "Game", new {isAI=false})" class="btn W2Play_btn btn-lg" style="width:60%">VS 2 PLAYER</a>
+                </div>
+                <div class="col-6">
+                    <a href="@Url.Action("SelectMode", "Game", new {isAI=true})" class="btn WAI_btn btn-lg" style="width:60%">VS COMPUTER</a>
+                </div>
+            </div>
+
+            <!--Bàn cờ-->
+            <div>
+                <table id="board">
+                    @for (int i = 0; i < Model.board.size; i++)
+                    {
+                        <tr>
+                            @for (int j = 0; j < Model.board.size; j++)
+                            {
+                                <td style="width:40px;height:40px;border:1px solid black;text-align:center;font-size:18px;">
+                                    @if (Model.board.cells[i, j] == 0 && !Model.IsOver)
+                                    {
+                                        if (Model.IsAIMode)
+                                        {
+                                            <a href="@Url.Action("AfterClick_AI_Mode", "Game", new {r=i,c=j})" style="display:block;width:100%;height:100%;"></a>
+                                        }
+                                        else
+                                        {
+                                            <a href="@Url.Action("AfterClick", "Game", new {r=i,c=j})" style="display:block;width:100%;height:100%;"></a>
+                                        }
+
+                                    }
+                                    else if (Model.board.cells[i, j] == 1)
+                                    {
+                                        <span>X</span>
+                                    }
+                                    else if (Model.board.cells[i, j] == 2)
+                                    {
+                                        <span>O</span>
+                                    }
+                                </td>
+                            }
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+        <!--Cột hiển thị game control và thực hiện thống kê-->
+        <div class="col-4">
+            <!--Hiển thị game control-->
+            <div style="border: 1px solid #c2dcff;padding-bottom:20px">
+                <!--title-->
+                <h4 style="width: 100%; background-color: #c2dcff; text-align:center;line-height:50px">GAME CONTROL</h4>
+                <div style="margin-left:30px;padding-bottom:20px">
+                    <h6 style="margin-bottom:10px">Current player: <span name="current_player"> </span></h6>
+                    <h6>Step: <span name="step"> </span></h6>
+                </div>
+                <div style="text-align:center">
+                    <a class="btn btn-outline-primary btn-lg" style="min-width:150px">RESET</a>
+
+                </div>
+            </div>
+
+            <!--Hiển thị thống kê - Statistical win-->
+            <div style="border: 1px solid #e2cbf6; margin-top: 50px; min-height: 250px">
+                <!--title-->
+                <h4 style="width: 100%; background-color: #e2cbf6; text-align: center; line-height: 50px">STATISTICAL WIN</h4>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Hiển thị thông báo người chiến thắng-->
+    @if (TempData["WINNER"] != null)
+    {
+        <script>
+        alert("Người chiến thắng là: @( (int)TempData["WINNER"] == 1 ? "X" : "O" )");
+        </script>
+    }
+</div>
+

@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\carogame\\models\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|solutionrelative:carogame\\models\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|c:\\users\\user\\downloads\\carogame\\carogame\\carogame\\models\\ai_mode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|solutionrelative:carogame\\models\\ai_mode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\carogame\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|solutionrelative:carogame\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\carogame\\models\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|solutionrelative:carogame\\models\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\carogame\\views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|solutionrelative:carogame\\views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\carogame\\models\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|solutionrelative:carogame\\models\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\carogame\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|solutionrelative:carogame\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\carogame\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|solutionrelative:carogame\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\carogame\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A7BDAFA5-1A23-45FF-B678-950FA6007D83}|CaroGame\\CaroGame.csproj|solutionrelative:carogame\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AI_Mode.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Models\\AI_Mode.cs",
+              "RelativeDocumentMoniker": "CaroGame\\Models\\AI_Mode.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Models\\AI_Mode.cs",
+              "RelativeToolTip": "CaroGame\\Models\\AI_Mode.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAwwJYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T11:49:40.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Models\\GameState.cs",
+              "RelativeDocumentMoniker": "CaroGame\\Models\\GameState.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Models\\GameState.cs",
+              "RelativeToolTip": "CaroGame\\Models\\GameState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T13:15:13.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "CaroGame\\Controllers\\GameController.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Controllers\\GameController.cs",
+              "RelativeToolTip": "CaroGame\\Controllers\\GameController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T13:19:24.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Views\\Game\\Index.cshtml",
+              "RelativeDocumentMoniker": "CaroGame\\Views\\Game\\Index.cshtml",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Views\\Game\\Index.cshtml",
+              "RelativeToolTip": "CaroGame\\Views\\Game\\Index.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAACcAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T13:19:35.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Board.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Models\\Board.cs",
+              "RelativeDocumentMoniker": "CaroGame\\Models\\Board.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Models\\Board.cs",
+              "RelativeToolTip": "CaroGame\\Models\\Board.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T14:21:48.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CaroGame\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CaroGame\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T09:11:43.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Move.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Models\\Move.cs",
+              "RelativeDocumentMoniker": "CaroGame\\Models\\Move.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Models\\Move.cs",
+              "RelativeToolTip": "CaroGame\\Models\\Move.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T13:18:20.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "CaroGame\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "CaroGame\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T09:05:26.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "CaroGame\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\CaroGame\\CaroGame\\CaroGame\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "CaroGame\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T13:20:19.603Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
